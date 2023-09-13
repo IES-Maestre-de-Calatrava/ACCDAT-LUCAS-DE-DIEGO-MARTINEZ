@@ -16,6 +16,6 @@ public class HolaMundo {
         System.out.println("Hello World!");
         File ficheroPrueba = new File("L:\\NetBeans Projects\\ACCDAT-LUCAS-DE-DIEGO-MARTINEZ\\HolaMundo\\src\\ejemploprueba.txt");
         float tamano = ficheroPrueba.length();
-        System.out.println(tamano);
+        System.out.println(tamano + " bytes");
     }    
 }
