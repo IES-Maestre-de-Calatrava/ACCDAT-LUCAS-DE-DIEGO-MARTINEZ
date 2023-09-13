@@ -17,4 +17,8 @@ public class HolaMundo {
     public int value(){
         return 5;
     }
+    
+    public boolean fock(){
+        return true;
+    }
 }
