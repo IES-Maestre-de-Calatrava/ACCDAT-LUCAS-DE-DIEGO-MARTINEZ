@@ -32,8 +32,14 @@ public class File3Eliminando {
             System.out.println(archivos[i]);
         }
         
-        file1.delete();
-        file2.delete();
-        carpeta.delete();
+        File[] lista = carpeta.listFiles();
+        
+        for (File e:lista){
+            if(e.isDirectory()){
+                System.out.println("el directorio esta vacio");
+            } else if (e.isFile()){
+                e.delete();
+            }
+        }
     }
 }

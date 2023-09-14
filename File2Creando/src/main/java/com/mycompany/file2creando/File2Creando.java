@@ -31,8 +31,4 @@ public class File2Creando {
             System.out.println(archivos[i]);
         }   
     }
-
-    private static void CreateNewFile(String camino, String dir1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
