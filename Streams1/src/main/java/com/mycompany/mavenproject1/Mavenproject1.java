@@ -49,12 +49,13 @@ public class Mavenproject1 {
             int i;
             char[] cadena= new char[20];
             i = fr.read(cadena);
+            System.out.print(cadena);
             while (i!=-1){
-                System.out.print(cadena);
                 Arrays.fill(cadena,'\u0000');
                 i = fr.read(cadena);
+                System.out.print(cadena);
+
             }
-            
         } catch (FileNotFoundException fn){
             System.out.print("File no encontrado"+fn);
         } catch (IOException ioe){
