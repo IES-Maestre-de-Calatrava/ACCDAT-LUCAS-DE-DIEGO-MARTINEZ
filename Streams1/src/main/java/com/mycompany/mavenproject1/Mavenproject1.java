@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  *
@@ -50,7 +51,7 @@ public class Mavenproject1 {
             i = fr.read(cadena);
             while (i!=-1){
                 System.out.print(cadena);
-                cadena= new char[20];
+                Arrays.fill(cadena,'\u0000');
                 i = fr.read(cadena);
             }
             
