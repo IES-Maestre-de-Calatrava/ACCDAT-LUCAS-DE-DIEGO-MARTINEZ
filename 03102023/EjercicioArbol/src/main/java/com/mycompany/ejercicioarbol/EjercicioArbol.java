@@ -29,26 +29,25 @@ import org.w3c.dom.Text;
 public class EjercicioArbol {
 
     public static void main(String[] args) {
-       
-       
-       
+    
+    
+    
         try {
             Document archivoEmpleados = inicializar("Empleados");
-           
+            
             Element nodo = crearNodoPrincipal("Empleado", archivoEmpleados);
             nodo = añadirNodo("id", "1", nodo, archivoEmpleados);
             añadirNodo("direccion", nodo, archivoEmpleados);
             añadirNodo("calle", "Toledo", nodo, archivoEmpleados);
-           
-
+            
             mostrarPantalla(archivoEmpleados);
             generarArchivo(archivoEmpleados, "Empleados.xml");
-           
+            
         } catch (ParserConfigurationException pce) {
             System.out.println("Excepción.");
         }  
     }
-   
+    
     static void mostrarPantalla (Document archivo) {
         Source source = new DOMSource(archivo);
         Result salida = new StreamResult(System.out);
@@ -59,7 +58,7 @@ public class EjercicioArbol {
             System.out.println("Excepción del transformer.");
         }
     }
-   
+    
     static void generarArchivo (Document archivo, String nombre) {
         Source source = new DOMSource(archivo);
         Result salida = new StreamResult(new File(nombre));
@@ -70,7 +69,7 @@ public class EjercicioArbol {
             System.out.println("Excepción del transformer.");
         }
     }
-   
+    
     static Element añadirNodo (String datoEmple, String texto, Element raíz, Document documento) {
         Element dato = documento.createElement(datoEmple);
         Text textoDato = documento.createTextNode(texto);
@@ -78,19 +77,19 @@ public class EjercicioArbol {
         raíz.appendChild(dato);
         return dato;
     }
-   
+    
     static Element añadirNodo (String datoEmple, Element raíz, Document documento) {
         Element dato = documento.createElement(datoEmple);
         raíz.appendChild(dato);
         return dato;
     }
-   
+    
     static Element crearNodoPrincipal(String nombreNodo, Document documento) {
         Element nodoPrincipal = documento.createElement(nombreNodo);
         documento.getDocumentElement().appendChild(nodoPrincipal);
         return nodoPrincipal;
     }
-   
+    
     static Document inicializar (String nombre) throws ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -99,4 +98,5 @@ public class EjercicioArbol {
         archivo.setXmlVersion("1.0");
         return archivo;
     }
+    
 }
