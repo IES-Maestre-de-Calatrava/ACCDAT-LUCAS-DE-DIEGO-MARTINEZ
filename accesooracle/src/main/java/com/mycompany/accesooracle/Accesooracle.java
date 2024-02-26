@@ -42,7 +42,7 @@ public class Accesooracle {
             //añadirCampo();
             
             //ejecutarProcedimiento();
-            ejecutarFuncion(10);
+            //ejecutarFuncion(10);
             consultaSencilla();
 
             
